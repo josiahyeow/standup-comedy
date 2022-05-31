@@ -1,5 +1,4 @@
-import { useQuery } from "@apollo/client";
-import { gql } from "apollo-server-core";
+import { useQuery, gql } from "@apollo/client";
 import type { NextPage } from "next";
 
 export const Joke: NextPage = () => {
@@ -16,7 +15,7 @@ export const Joke: NextPage = () => {
   return <div>{data.tellJoke}</div>;
 };
 
-const query = gql`
+export const query = gql`
   query TellJoke {
     tellJoke
   }
