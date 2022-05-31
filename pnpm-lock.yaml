@@ -10,7 +10,6 @@ specifiers:
   '@types/node': 17.0.36
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.5
-  '@types/uuid': ^8.3.4
   apollo-server-core: ^3.8.1
   apollo-server-micro: ^3.8.1
   eslint: 8.16.0
@@ -46,7 +45,6 @@ devDependencies:
   '@types/node': 17.0.36
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.5
-  '@types/uuid': 8.3.4
   eslint: 8.16.0
   eslint-config-next: 12.1.6_5794735a2262de3d29e0baaa885b5942
   jest-environment-jsdom: 28.1.0
@@ -1332,10 +1330,6 @@ packages:
 
   /@types/tough-cookie/4.0.2:
     resolution: {integrity: sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==}
-    dev: true
-
-  /@types/uuid/8.3.4:
-    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /@types/yargs-parser/21.0.0:
