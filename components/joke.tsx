@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import { MessageBubble } from "./message-bubble";
 
 export const Joke: NextPage = () => {
-  const { data, loading, error, refetch } = useQuery(query);
+  const { data, loading, error } = useQuery(query);
 
   if (loading) {
     return (
@@ -20,14 +20,6 @@ export const Joke: NextPage = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <MessageBubble>{data.tellJoke}</MessageBubble>
-      <button
-        type="button"
-        onClick={async () => {
-          await refetch();
-        }}
-      >
-        Tell another
-      </button>
     </div>
   );
 };
