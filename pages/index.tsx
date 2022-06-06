@@ -10,16 +10,7 @@ const JokePage: NextPage = () => {
           maxWidth: "480px",
         }}
       >
-        <div
-          style={{
-            background: "#efefef",
-            padding: "1rem",
-            borderRadius: "1rem 1rem 1rem 0",
-            margin: "1rem",
-          }}
-        >
-          <Joke />
-        </div>
+        <Joke />
       </div>
     </div>
   );

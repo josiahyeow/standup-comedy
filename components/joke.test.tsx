@@ -1,6 +1,7 @@
 import { Joke, query } from "./joke";
 import { MockedProvider } from "@apollo/client/testing";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Joke", () => {
   describe("joke is loading", () => {
@@ -10,7 +11,7 @@ describe("Joke", () => {
           <Joke />
         </MockedProvider>
       );
-      expect(await screen.findByText("Loading...")).toBeInTheDocument();
+      expect(await screen.findByText("...")).toBeInTheDocument();
     });
   });
   describe("error getting joke", () => {
@@ -77,6 +78,42 @@ describe("Joke", () => {
         </MockedProvider>
       );
       expect(await screen.findByText("funny joke")).toBeInTheDocument();
+    });
+  });
+
+  describe("tell another button clicked", () => {
+    const mocks = [
+      {
+        request: {
+          query,
+        },
+        result: {
+          data: {
+            tellJoke: "funny joke",
+          },
+        },
+      },
+      {
+        request: {
+          query,
+        },
+        result: {
+          data: {
+            tellJoke: "funnier joke",
+          },
+        },
+      },
+    ];
+    it("shows another joke", async () => {
+      render(
+        <MockedProvider mocks={mocks}>
+          <Joke />
+        </MockedProvider>
+      );
+      userEvent.click(
+        await screen.findByRole("button", { name: "Tell another" })
+      );
+      expect(await screen.findByText("funnier joke")).toBeInTheDocument();
     });
   });
 });
