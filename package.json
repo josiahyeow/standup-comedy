@@ -11,9 +11,9 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.5",
     "apollo-server-core": "^3.8.1",
     "apollo-server-micro": "^3.8.1",
-    "@apollo/client": "^3.6.5",
     "graphql": "^16.5.0",
     "isomorphic-unfetch": "^3.1.0",
     "jest": "^28.1.0",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.17.12",
+    "@graphql-tools/schema": "^8.3.13",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.2.0",

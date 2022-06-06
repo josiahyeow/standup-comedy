@@ -1,10 +1,9 @@
-import { JokesService } from "./jokes-service/jokes-service";
+import { Context } from "@apollo/client";
 
 export const resolvers = {
   Query: {
-    tellJoke: () => {
-      const jokes = JokesService();
-      return jokes.tellJoke();
+    tellJoke: (_root: {}, _args: {}, context: Context) => {
+      return context.jokes.tellJoke();
     },
   },
 };

@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@apollo/client': ^3.6.5
   '@babel/preset-typescript': ^7.17.12
+  '@graphql-tools/schema': ^8.3.13
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.2.0
   '@testing-library/user-event': 14.2.0
@@ -38,6 +39,7 @@ dependencies:
 
 devDependencies:
   '@babel/preset-typescript': 7.17.12
+  '@graphql-tools/schema': 8.3.13_graphql@16.5.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.2.0_react-dom@18.1.0+react@18.1.0
   '@testing-library/user-event': 14.2.0
@@ -616,7 +618,6 @@ packages:
       '@graphql-tools/utils': 8.6.12_graphql@16.5.0
       graphql: 16.5.0
       tslib: 2.4.0
-    dev: false
 
   /@graphql-tools/mock/8.6.11_graphql@16.5.0:
     resolution: {integrity: sha512-O9q/tdKCMURAzRLM6hGBCik/bCh8Opk6XUX5AhhDrEyLwTJVwGUsI/vSctRmVq7yfFm0dNBQosz/EsqL0fkNZg==}
@@ -640,7 +641,6 @@ packages:
       graphql: 16.5.0
       tslib: 2.4.0
       value-or-promise: 1.0.11
-    dev: false
 
   /@graphql-tools/utils/8.6.12_graphql@16.5.0:
     resolution: {integrity: sha512-WQ91O40RC+UJgZ9K+IzevSf8oolR1QE+WQ21Oyc2fgDYYiqT0eSf+HVyhZr/8x9rVjn3N9HeqCsywbdmbljg0w==}
@@ -649,7 +649,6 @@ packages:
     dependencies:
       graphql: 16.5.0
       tslib: 2.4.0
-    dev: false
 
   /@graphql-typed-document-node/core/3.1.1_graphql@16.5.0:
     resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
@@ -4595,7 +4594,6 @@ packages:
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-    dev: false
 
   /tsutils/3.21.0_typescript@4.7.2:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -4699,7 +4697,6 @@ packages:
   /value-or-promise/1.0.11:
     resolution: {integrity: sha512-41BrgH+dIbCFXClcSapVs5M6GkENd3gQOJpEfPDNa71LsUGMXDL0jMWpI/Rh7WhX+Aalfz2TTS3Zt5pUsbnhLg==}
     engines: {node: '>=12'}
-    dev: false
 
   /w3c-hr-time/1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}

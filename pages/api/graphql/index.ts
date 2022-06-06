@@ -2,11 +2,15 @@ import { ApolloServer } from "apollo-server-micro";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { typeDefs } from "./schema";
 import { resolvers } from "./resolvers";
+import { JokesService } from "./jokes-service/jokes-service";
 
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+  context: {
+    jokes: JokesService(),
+  },
 });
 
 const startServer = apolloServer.start();
