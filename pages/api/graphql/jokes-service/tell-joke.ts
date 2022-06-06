@@ -9,10 +9,6 @@ export function prepareToTellJoke({
 }) {
   return async function tellJoke(): Promise<string> {
     const joke = await getJoke();
-    const hasBeenTold = await checkIfJokeHasBeenTold(joke.id);
-    if (hasBeenTold) {
-      return tellJoke();
-    }
     await addJokeToListOfToldJokes(joke.id);
     return joke.joke;
   };
