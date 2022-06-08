@@ -24,6 +24,17 @@ describe("tell joke", () => {
     });
   });
   describe("joke found has already been told before", () => {
-    it.todo("tells a new joke");
+    beforeEach(() => {
+      deps.getJoke.mockResolvedValueOnce({ id: "1", joke: "something funny" });
+      deps.getJoke.mockResolvedValueOnce({
+        id: "1",
+        joke: "something funnier",
+      });
+      deps.checkIfJokeHasBeenTold.mockResolvedValueOnce(true);
+    });
+    it("tells a new joke", async () => {
+      const joke = await tellJoke();
+      expect(joke).toEqual("something funnier");
+    });
   });
 });
