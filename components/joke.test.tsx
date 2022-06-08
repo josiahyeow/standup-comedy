@@ -82,6 +82,38 @@ describe("Joke", () => {
   });
 
   describe("tell another button clicked", () => {
-    it.todo("shows another joke");
+    const mocks = [
+      {
+        request: {
+          query,
+        },
+        result: {
+          data: {
+            tellJoke: "funny joke",
+          },
+        },
+      },
+      {
+        request: {
+          query,
+        },
+        result: {
+          data: {
+            tellJoke: "funnier joke",
+          },
+        },
+      },
+    ];
+    it("shows another joke", async () => {
+      render(
+        <MockedProvider mocks={mocks}>
+          <Joke />
+        </MockedProvider>
+      );
+      userEvent.click(
+        await screen.findByRole("button", { name: "Tell another" })
+      );
+      expect(await screen.findByText("funnier joke")).toBeInTheDocument();
+    });
   });
 });
